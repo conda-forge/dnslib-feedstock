@@ -1,18 +1,18 @@
 {% set name = "dnslib" %}
-{% set version = "0.9.12" %}
+{% set version = "0.9.13" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: c206f09948f3ad17884adffdb552b700072c6022fa59744a0f0606114c475e19
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a0fed3e139c12ee4884b19bcde1d4a170745bcabb6026397876e3236ce38b9db
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -26,13 +26,13 @@ test:
     - dnslib
 
 about:
-  home: "http://bitbucket.org/paulc/dnslib/"
-  license: "BSD-2-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE"
-  summary: "Simple library to encode/decode DNS wire-format packets"
-  doc_url: "https://pypi.org/project/dnslib/"
-  dev_url: "https://bitbucket.org/paulc/dnslib/src/default/"
+  home: http://bitbucket.org/paulc/dnslib/
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Simple library to encode/decode DNS wire-format packets
+  doc_url: https://pypi.org/project/dnslib/
+  dev_url: https://bitbucket.org/paulc/dnslib/src/default/
 
 extra:
   recipe-maintainers:
