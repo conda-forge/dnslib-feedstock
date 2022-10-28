@@ -1,5 +1,5 @@
 {% set name = "dnslib" %}
-{% set version = "0.9.22" %}
+{% set version = "0.9.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10afc94f6a5f1cb8b38824e042e25e5414e1faaedfd39b348ae8d97722921a86
+  sha256: 310196d3e38ce2051b61eebbd2f1d08fcc934fa3360f22031864d16efe8bca77
 
 build:
   noarch: python
